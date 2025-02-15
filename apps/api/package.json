@@ -2,6 +2,7 @@
   "name": "@word-games/api",
   "type": "module",
   "scripts": {
+    "lint": "eslint --max-warnings 0",
     "dev": "pnpm --filter @word-games/api --parallel \"/^dev:.*/\"",
     "dev:tsc": "tsc -p tsconfig.build.json --watch",
     "dev:server": "tsx src/index.ts --watch",
@@ -18,6 +19,7 @@
     "pg": "^8.13.3"
   },
   "devDependencies": {
+    "@word-games/eslint-config": "workspace:*",
     "@types/node": "^20.11.17",
     "@types/pg": "^8.11.11",
     "drizzle-kit": "^0.30.4",
