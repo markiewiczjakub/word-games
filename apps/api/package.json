@@ -4,14 +4,23 @@
   "scripts": {
     "dev": "pnpm --filter @word-games/api --parallel \"/^dev:.*/\"",
     "dev:tsc": "tsc -p tsconfig.build.json --watch",
-    "dev:server": "tsx src/index.ts --watch"
+    "dev:server": "tsx src/index.ts --watch",
+    "db:generate": "drizzle-kit generate",
+    "db:migrate": "drizzle-kit migrate",
+    "db:push": "drizzle-kit push",
+    "db:studio": "drizzle-kit studio"
   },
   "dependencies": {
     "@hono/node-server": "^1.13.8",
-    "hono": "^4.7.1"
+    "dotenv": "^16.4.7",
+    "drizzle-orm": "^0.39.3",
+    "hono": "^4.7.1",
+    "pg": "^8.13.3"
   },
   "devDependencies": {
     "@types/node": "^20.11.17",
-    "tsx": "^4.7.1"
+    "@types/pg": "^8.11.11",
+    "drizzle-kit": "^0.30.4",
+    "tsx": "^4.19.2"
   }
 }
