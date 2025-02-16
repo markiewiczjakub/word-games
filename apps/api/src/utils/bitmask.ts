@@ -1,6 +1,6 @@
 export function generateBitmask(word: string): string {
   const polishAlphabet = "aąbcćdeęfghijklłmnńoóprsśtuwxyzźż";
-  let bitmask = "0".repeat(35); // Initialize with 35 zeros
+  let bitmask = "0".repeat(polishAlphabet.length);
 
   for (const char of word.toLowerCase()) {
     const index = polishAlphabet.indexOf(char);

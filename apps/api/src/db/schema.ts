@@ -5,7 +5,7 @@ export const wordsTable = pgTable(
   {
     id: integer().primaryKey().generatedAlwaysAsIdentity(),
     word: varchar({ length: 255 }).notNull().unique(),
-    letters: bit({ dimensions: 35 }).notNull(),
+    letters: bit({ dimensions: 33 }).notNull(),
   },
   (table) => [
     index("idx_word").on(table.word),
