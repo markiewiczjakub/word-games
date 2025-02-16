@@ -5,7 +5,7 @@
     "lint": "eslint --max-warnings 0",
     "dev": "pnpm --filter @word-games/api --parallel \"/^dev:.*/\"",
     "dev:tsc": "tsc -p tsconfig.build.json --watch",
-    "dev:server": "tsx src/index.ts --watch",
+    "dev:server": "tsx watch src/index.ts",
     "db:generate": "drizzle-kit generate",
     "db:migrate": "drizzle-kit migrate",
     "db:push": "drizzle-kit push",
